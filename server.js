@@ -89,7 +89,10 @@ let embed = new Discord.RichEmbed()//ukqzn
 
 ⚡| **up!kurdish-supporter** : show all data bots .
  
-🧧 | Linke Support Bot 
+🧧 | **Linke Support Bot :- https://discord.gg/SVW7QhwzxM**
+
+🧧 |** Owner Bots :-** <@776494689703559208> <@717490675398213653> 
+
 
 `)
 .setAuthor(`UptimeBOT | help `, client.user.avatarURL)
@@ -108,10 +111,27 @@ client.on("message", message => {//ukqzn
   var spl = message.content.split(" ");//ukqzn
   if(spl[0] == "up!kurdish-supporter") {
   var link = spl[1]
- message.channel.send(`***çok yakında eklenecek!***`)//ukqzn
+ message.channel.send(`***will be added very soon!***`)//ukqzn
 }})
 
-//coded by ukqzn
-  
 
   
+client.on("message", message => {
+  if (message.content === "up!invite") {
+    if (!message.channel.guild)
+      return message.reply(
+        "Please Do not type bot commands in bot private chat"
+      );
+    let embed = new Discord.RichEmbed()
+      .setColor("GREEN")
+      .setTitle("=-->Click Touch For Link Bot<--=")
+      .setImage(
+        "https://cdn.discordapp.com/attachments/722281428548583524/735652330384392243/2Dn3.gif"
+      )
+      .setURL(
+        "https://discord.com/api/oauth2/authorize?client_id=735451077964464158&permissions=8&scope=bot"
+      ) // Type Your Link here after ''
+      .setFooter("𝐁𝐘 𝐌𝐀𝐑𝐒", message.author.avatarURL);
+    message.channel.sendEmbed(embed);
+  }
+});
