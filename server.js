@@ -129,7 +129,7 @@ client.on("message", message => {
         "https://cdn.discordapp.com/attachments/722281428548583524/735652330384392243/2Dn3.gif"
       )
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=735451077964464158&permissions=8&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=769622373716328489&permissions=8&scope=bot"
       ) // Type Your Link here after ''
       .setFooter("𝐁𝐘 𝐌𝐀𝐑𝐒", message.author.avatarURL);
     message.channel.sendEmbed(embed);
