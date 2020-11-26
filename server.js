@@ -3,7 +3,7 @@ require("express")().listen(1343);//ukqzn
 const db = require("quick.db"); 
 const discord = require("discord.js");//ukqzn
 const client = new discord.Client({ disableEveryone: true });//ukqzn
-client.login("NzY5NjIyMzczNzE2MzI4NDg5.X5RssA.un5Ku47Epg5HUOfgfJv1BjeNIH4");
+client.login("NzIzODUyMTM4NjEwMDMyNzIw.Xu3p1g.EUKQvnXuqDDJwovUvk6VIW_QQXI");
 const fetch = require("node-fetch");
 const fs = require('fs')//ukqzn
 
@@ -129,7 +129,7 @@ client.on("message", message => {
         "https://media.discordapp.net/attachments/780899742079123476/781475751656161290/Gif_1606388670585.gif?width=512&height=288"
       )
       .setURL(
-        "https://discord.com/api/oauth2/authorize?client_id=769622373716328489&permissions=8&scope=bot"
+        "https://discord.com/api/oauth2/authorize?client_id=723852138610032720&permissions=8&scope=bot"
       ) // Type Your Link here after ''
       .setFooter("Kurdish Supporter", message.author.avatarURL);
     message.channel.sendEmbed(embed);
