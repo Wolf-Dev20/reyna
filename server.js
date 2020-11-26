@@ -3,7 +3,7 @@ require("express")().listen(1343);//ukqzn
 const db = require("quick.db"); 
 const discord = require("discord.js");//ukqzn
 const client = new discord.Client({ disableEveryone: true });//ukqzn
-client.login("TOKEN");
+client.login("NzY5NjIyMzczNzE2MzI4NDg5.X5RssA.un5Ku47Epg5HUOfgfJv1BjeNIH4");
 const fetch = require("node-fetch");
 const fs = require('fs')//ukqzn
 
@@ -126,12 +126,12 @@ client.on("message", message => {
       .setColor("GREEN")
       .setTitle("=-->Click Touch For Link Bot<--=")
       .setImage(
-        "https://cdn.discordapp.com/attachments/722281428548583524/735652330384392243/2Dn3.gif"
+        "https://media.discordapp.net/attachments/780899742079123476/781475751656161290/Gif_1606388670585.gif?width=512&height=288"
       )
       .setURL(
         "https://discord.com/api/oauth2/authorize?client_id=769622373716328489&permissions=8&scope=bot"
       ) // Type Your Link here after ''
-      .setFooter("𝐁𝐘 𝐌𝐀𝐑𝐒", message.author.avatarURL);
+      .setFooter("Kurdish Supporter", message.author.avatarURL);
     message.channel.sendEmbed(embed);
   }
 });
