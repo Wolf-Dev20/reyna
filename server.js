@@ -26,7 +26,7 @@ db.set("linkler", [])
 })
 
 client.on("ready", () => {
-  client.user.setActivity(`u!uprime | Kurdish Supporter`)//ukqzn
+  client.user.setActivity(`u!uptime | Kurdish Supporter`)//ukqzn
   console.log(`Logined`)//ukqzn
 })
 
