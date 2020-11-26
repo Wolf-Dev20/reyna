@@ -16,7 +16,7 @@ setInterval(() => {
       fetch(link)
     } catch(e) { console.log("" + e) };
   })
-  console.log("Başarıyla Pinglendi.")//ukqzn
+  console.log("Pinged Successfully.")//ukqzn
 }, 60000)
 
 client.on("ready", () => {
@@ -26,7 +26,7 @@ db.set("linkler", [])
 })
 
 client.on("ready", () => {
-  client.user.setActivity(`up!ekle | DM'den kullan!`)//ukqzn
+  client.user.setActivity(`up!uprime | UPDATE LODING...`)//ukqzn
   console.log(`Logined`)//ukqzn
 })
 
@@ -34,27 +34,27 @@ client.on("ready", () => {
 client.on("message", message => {
   if(message.author.bot) return;
   var spl = message.content.split(" ");//ukqzn
-  if(spl[0] == "up!ekle") {
+  if(spl[0] == "up!uptime") {
   var link = spl[1]//ukqzn
   fetch(link).then(() => {//ukqzn
-    if(db.get("linkler").map(z => z.url).includes(link)) return message.channel.send("**⛔ Bu bot zaten uptime ediliyor.**")//ukqzn
+    if(db.get("linkler").map(z => z.url).includes(link)) return message.channel.send("**⛔ This bot is already being uptime.**")//ukqzn
     
-    let yardım = new Discord.RichEmbed()//ukqzn
+    let help = new Discord.RichEmbed()//ukqzn
         .setAuthor(client.user.username)
         .setColor(0x6A3DB8)
-        .setDescription("**✅ Başarılı! Projeniz artık 7/24!**")//ukqzn
+        .setDescription("**✅ Successful! Your project is now 24/7!**")//ukqzn
         .setFooter(`© ${client.user.username}`)
         .setTimestamp()
-     message.channel.send(yardım).then(msg => msg.delete(60000)); //ukqzn
+     message.channel.send(help).then(msg => msg.delete(60000)); //ukqzn
     db.push("linkler", { url: link, owner: message.author.id})
   }).catch(e => {
-    let yardım = new Discord.RichEmbed()//ukqzn
+    let help = new Discord.RichEmbed()//ukqzn
         .setAuthor(client.user.username)
         .setColor(0x6A3DB8)
-        .setDescription("⛔ **Hata! Sadece düzgün url'ler ekleyebilirsiniz.**")//ukqzn
+        .setDescription("⛔ **Error! You can just add proper urls.**")//ukqzn
         .setFooter(`© ${client.user.username}`)
         .setTimestamp()
-   return message.channel.send(yardım).then(msg => msg.delete(60000)); //ukqzn
+   return message.channel.send(help).then(msg => msg.delete(60000)); //ukqzn
   })//ukqzn
   }
 })
@@ -78,20 +78,22 @@ client.on("message", message => {
   if(spl[0] == "up!yardım") {
 let embed = new Discord.RichEmbed()//ukqzn
 .setColor('#070706')
-.addField(`Botu Davet Etmek için Tıkla! = https://bit.ly/UptimeBOT`, `Botu Sunucunuza Eklerseniz Büyük Destek Olursunuz!`)
-.setDescription(`**Uptime komudunu kullandıktan sonra sisteme eklenmesi için 3-5 dk bekleyin.**
+.addField(`Hosting Bot Prime`)
+.setDescription(`**Uptime All BOT **
 
- 🌙 **up!yardım** : Botun yardım menüsünü açar.
+⚡| up!help** : Commands Help Bot.
 
- 🔋 **up!ekle <link>** : Eklediğiniz proje linkini 7/24 açık yapar.
+🔋 | **up!uptime <link live app>** : Hosting Bot CMD and links Live app.
 
- ⚡ **up!botsay** : Bot'umuzla uptime olan proje sayısını gösterir.
+⚡| **up!botsay** : All Hosting projekt .
 
- 🔮 **up!botbilgi** : Bot'un istastistik verilerini gösterir.
+⚡| **up!kurdish-supporter** : show all data bots .
+ 
+🧧 | Linke Support Bot 
 
 `)
-.setAuthor(`UptimeBOT | Yardım Menüsü`, client.user.avatarURL)
-.setFooter(`UptimeBOT | Botun Kodlayıcıları = Umut#1337 ve 'YamaND__#0045`)//ukqzn
+.setAuthor(`UptimeBOT | help `, client.user.avatarURL)
+.setFooter(`UptimeBOT |Kurdish Supporter`)//ukqzn
 .setImage(`https://cdn.discordapp.com/attachments/741014134576906332/741980222101913600/unknown.png`)
 return message.channel.send(embed);//ukqzn
     }
@@ -104,7 +106,7 @@ return message.channel.send(embed);//ukqzn
 client.on("message", message => {//ukqzn
   if(message.author.bot) return;
   var spl = message.content.split(" ");//ukqzn
-  if(spl[0] == "up!botbilgi") {
+  if(spl[0] == "up!kurdish-supporter") {
   var link = spl[1]
  message.channel.send(`***çok yakında eklenecek!***`)//ukqzn
 }})
