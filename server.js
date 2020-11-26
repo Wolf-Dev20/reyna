@@ -26,7 +26,7 @@ db.set("linkler", [])
 })
 
 client.on("ready", () => {
-  client.user.setActivity(`up!uprime | UPDATE LODING...`)//ukqzn
+  client.user.setActivity(`u!uprime | Kurdish Supporter`)//ukqzn
   console.log(`Logined`)//ukqzn
 })
 
@@ -34,7 +34,7 @@ client.on("ready", () => {
 client.on("message", message => {
   if(message.author.bot) return;
   var spl = message.content.split(" ");//ukqzn
-  if(spl[0] == "up!uptime") {
+  if(spl[0] == "u!uptime") {
   var link = spl[1]//ukqzn
   fetch(link).then(() => {//ukqzn
     if(db.get("linkler").map(z => z.url).includes(link)) return message.channel.send("**⛔ This bot is already being uptime.**")//ukqzn
@@ -63,7 +63,7 @@ client.on("message", message => {
 client.on("message", message => {//ukqzn
   if(message.author.bot) return;
   var spl = message.content.split(" ");//ukqzn
-  if(spl[0] == "up!botsay") {//ukqzn
+  if(spl[0] == "u!botsay") {//ukqzn
   var link = spl[1]
  message.channel.send(`**${db.get("linkler").length} / 1000**`)//ukqzn
 }})
@@ -75,19 +75,19 @@ const Discord = require('discord.js');
 client.on("message", message => {
   if(message.author.bot) return;
     var spl = message.content.split(" ");//ukqzn
-  if(spl[0] == "up!yardım") {
+  if(spl[0] == "u!help") {
 let embed = new Discord.RichEmbed()//ukqzn
 .setColor('#070706')
 .addField(`Hosting Bot Prime`)
 .setDescription(`**Uptime All BOT **
 
-⚡| up!help** : Commands Help Bot.
+⚡| u!help** : Commands Help Bot.
 
-🔋 | **up!uptime <link live app>** : Hosting Bot CMD and links Live app.
+🔋 | **u!uptime <link live app>** : Hosting Bot CMD and links Live app.
 
-⚡| **up!botsay** : All Hosting projekt .
+⚡| **u!botsay** : All Hosting projekt .
 
-⚡| **up!kurdish-supporter** : show all data bots .
+⚡| **u!kurdish-supporter** : show all data bots .
  
 🧧 | **Linke Support Bot :- https://discord.gg/SVW7QhwzxM**
 
@@ -109,7 +109,7 @@ return message.channel.send(embed);//ukqzn
 client.on("message", message => {//ukqzn
   if(message.author.bot) return;
   var spl = message.content.split(" ");//ukqzn
-  if(spl[0] == "up!kurdish-supporter") {
+  if(spl[0] == "u!kurdish-supporter") {
   var link = spl[1]
  message.channel.send(`***will be added very soon!***`)//ukqzn
 }})
@@ -117,7 +117,7 @@ client.on("message", message => {//ukqzn
 
   
 client.on("message", message => {
-  if (message.content === "up!invite") {
+  if (message.content === "u!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
@@ -135,3 +135,21 @@ client.on("message", message => {
     message.channel.sendEmbed(embed);
   }
 });
+
+
+
+client.on('guildCreate', guild => {
+client.channels.get("769635399948566588").send(`✅ **${client.user.tag} ئادی سێرڤەرێکی تر کرا 
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
+}); //Fsociety
+client.on('guildDelete', guild => {
+  client.channels.get("769635399948566588").send(`❎ **${client.user.tag} ڕۆشت لە سێرڤەر 
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
+});     
+
