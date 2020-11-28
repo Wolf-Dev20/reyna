@@ -91,7 +91,7 @@ let embed = new Discord.RichEmbed()//ukqzn
  
 🧧 | **Linke Support Bot :- https://discord.gg/SVW7QhwzxM**
 
-🧧 |** Owner Bots :-** <@776494689703559208> <@717490675398213653> 
+🧧 |** Owner Bots :-** <@776494689703559208> <@717490675398213653> <@682684278022471683>
 
 
 `)
