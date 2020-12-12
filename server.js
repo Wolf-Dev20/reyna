@@ -87,9 +87,7 @@ let embed = new Discord.RichEmbed()//ukqzn
 
 ⚡| **u!botsay** : All Hosting projekt .
 
-⚡| **u!kurdish-supporter** : show all data bots .
- 
-🧧 | **Linke Support Bot :- https://discord.gg/SVW7QhwzxM**
+⚡| **u!invites** : show all data bots .
 
 🧧 |** Owner Bots :-** <@776494689703559208> <@717490675398213653>
 
@@ -117,7 +115,7 @@ client.on("message", message => {//ukqzn
 
   
 client.on("message", message => {
-  if (message.content === "u!invite") {
+  if (message.content === "u!invites") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
@@ -126,7 +124,7 @@ client.on("message", message => {
       .setColor("GREEN")
       .setTitle("=-->Click Touch For Link Bot<--=")
       .setImage(
-        "https://media.discordapp.net/attachments/780899742079123476/781475751656161290/Gif_1606388670585.gif?width=512&height=288"
+        "https://discord.com/api/oauth2/authorize?client_id=723852138610032720&permissions=8&scope=bot"
       )
       .setURL(
         "https://discord.com/api/oauth2/authorize?client_id=723852138610032720&permissions=8&scope=bot"
