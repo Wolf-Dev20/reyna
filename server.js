@@ -26,7 +26,7 @@ db.set("linkler", [])
 })
 
 client.on("ready", () => {
-  client.user.setActivity(`u!uptime | Kurdish Supporter`)//ukqzn
+  client.user.setActivity(`u!help`)//ukqzn
   console.log(`Logined`)//ukqzn
 })
 
@@ -87,14 +87,14 @@ let embed = new Discord.RichEmbed()//ukqzn
 
 ⚡| **u!botsay** : All Hosting projekt .
 
-⚡| **u!invites** : show all data bots .
+⚡| **u!invite** : show all data bots .
 
-🧧 |** Owner Bots :-** <@776494689703559208> <@717490675398213653>
+🧧 |** Owner Bots :-** <@790233637580832788> <@749319771270545418>
 
 
 `)
 .setAuthor(`UptimeBOT | help `, client.user.avatarURL)
-.setFooter(`UptimeBOT |Kurdish Supporter`)//ukqzn
+.setFooter(`UptimeBOT |Hosting Bot`)//ukqzn
 .setImage(`https://cdn.discordapp.com/attachments/741014134576906332/741980222101913600/unknown.png`)
 return message.channel.send(embed);//ukqzn
     }
@@ -107,7 +107,7 @@ return message.channel.send(embed);//ukqzn
 client.on("message", message => {//ukqzn
   if(message.author.bot) return;
   var spl = message.content.split(" ");//ukqzn
-  if(spl[0] == "u!kurdish-supporter") {
+  if(spl[0] == "u!reyna") {
   var link = spl[1]
  message.channel.send(`***will be added very soon!***`)//ukqzn
 }})
@@ -115,7 +115,7 @@ client.on("message", message => {//ukqzn
 
   
 client.on("message", message => {
-  if (message.content === "u!invites") {
+  if (message.content === "u!invite") {
     if (!message.channel.guild)
       return message.reply(
         "Please Do not type bot commands in bot private chat"
@@ -129,7 +129,7 @@ client.on("message", message => {
       .setURL(
         "https://discord.com/api/oauth2/authorize?client_id=723852138610032720&permissions=8&scope=bot"
       ) // Type Your Link here after ''
-      .setFooter("Kurdish Supporter", message.author.avatarURL);
+      .setFooter("Hosting Reyna", message.author.avatarURL);
     message.channel.sendEmbed(embed);
   }
 });
